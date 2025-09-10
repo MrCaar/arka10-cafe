@@ -1,0 +1,50 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore ./FinalArka10/FinalArka10.csproj
+
+    - name: Build
+      run: dotnet build ./FinalArka10/FinalArka10.csproj --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test ./FinalArka10/FinalArka10.csproj --no-restore --verbosity normal
+      continue-on-error: true  # Tests may not exist yet
+
+  code-quality:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore ./FinalArka10/FinalArka10.csproj
+
+    - name: Build
+      run: dotnet build ./FinalArka10/FinalArka10.csproj --configuration Release --no-restore
+
+    - name: Run dotnet format
+      run: dotnet format ./FinalArka10/FinalArka10.csproj --verify-no-changes
+      continue-on-error: true  # Format may not be perfect yet

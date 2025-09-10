@@ -1,0 +1,155 @@
+# .NET Core
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.temp
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs
+*.exe
+*.dll
+*.pdb
+*.exe.config
+*.dll.config
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# MySQL
+*.sql
+!arka10.sql
+
+# Images and resources (optional - uncomment if you want to exclude)
+# images/
+# Resources/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Windows executables
+*.exe
+*.msi
+*.msm
+*.msp
+
+# Test results
+TestResults/
+*.trx
+*.testsettings
+
+# Coverage reports
+*.coverage
+*.coveragexml
+
+# Build scripts
+build/
+dist/
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if any)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# JetBrains Rider
+.idea/
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# StyleCop
+StyleCop.Cache
+
+# Files with sensitive information
+config.json
+appsettings.json
+secrets.json
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
