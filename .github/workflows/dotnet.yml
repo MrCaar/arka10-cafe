@@ -19,13 +19,13 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore ./FinalArka10/FinalArka10.csproj
+      run: dotnet restore ./Arka10/FinalArka10/FinalArka10.csproj
 
     - name: Build
-      run: dotnet build ./FinalArka10/FinalArka10.csproj --configuration Release --no-restore
+      run: dotnet build ./Arka10/FinalArka10/FinalArka10.csproj --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test ./FinalArka10/FinalArka10.csproj --no-restore --verbosity normal
+      run: dotnet test ./Arka10/FinalArka10/FinalArka10.csproj --no-restore --verbosity normal
       continue-on-error: true  # Tests may not exist yet
 
   code-quality:
@@ -40,11 +40,11 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore ./FinalArka10/FinalArka10.csproj
+      run: dotnet restore ./Arka10/FinalArka10/FinalArka10.csproj
 
     - name: Build
-      run: dotnet build ./FinalArka10/FinalArka10.csproj --configuration Release --no-restore
+      run: dotnet build ./Arka10/FinalArka10/FinalArka10.csproj --configuration Release --no-restore
 
     - name: Run dotnet format
-      run: dotnet format ./FinalArka10/FinalArka10.csproj --verify-no-changes
+      run: dotnet format ./Arka10/FinalArka10/FinalArka10.csproj --verify-no-changes
       continue-on-error: true  # Format may not be perfect yet
